@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -20,6 +21,12 @@ public class Main {
     private static List<String> toLowerCase(List<String> movieList) {
         return movieList.stream()
                 .map(s -> s.toLowerCase())
+                .collect(Collectors.toList());
+    }
+
+    private static List<String> toUppercase(List<String> movieList){
+        return movieList.stream()
+                .map(s -> s.toUpperCase())
                 .collect(Collectors.toList());
     }
 }
